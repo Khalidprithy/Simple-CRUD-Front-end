@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "62c6779ecc3b3084717c9186",
+        "picture": "https://i.ibb.co/vLCrv0T/product25.jpg",
+        "price": 312,
+        "name": "Jordan 14",
+        "quantity": 15,
+        "brand": "Nike"
+    },
+    {
+        "_id": "62c6779e17d2c78a2f7b4c3c",
+        "picture": "https://i.ibb.co/p2nJ38L/product24.webp",
+        "price": 139,
+        "name": "GG Marmont",
+        "quantity": 20,
+        "brand": "Gucci"
+    },
+    {
+        "_id": "62c6779ed683825981999b67",
+        "picture": "https://i.ibb.co/NF4MMG5/product24.jpg",
+        "price": 135,
+        "name": "Aquarius",
+        "quantity": 32,
+        "brand": "Dior"
+    },
+    {
+        "_id": "62c6779e952129ec194a0c05",
+        "picture": "https://i.ibb.co/59jTxvv/product23.jpg",
+        "price": 140,
+        "name": "Tambour",
+        "quantity": 10,
+        "brand": "Louis Vuitton"
+    },
+    {
+        "_id": "62c6779e4a73f7888956bd16",
+        "picture": "https://i.ibb.co/sj6CYzZ/product22.jpg",
+        "price": 124,
+        "name": "Puma Clyde",
+        "quantity": 18,
+        "brand": "Puma"
+    },
+    {
+        "_id": "62c6779ed90490c21ad30971",
+        "picture": "https://i.ibb.co/NTLnx0c/puma2.jpg",
+        "price": 123,
+        "name": "Puma Suede",
+        "quantity": 40,
+        "brand": "Puma"
+    }
+]
