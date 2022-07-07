@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Product from './Product';
 import { GrAdd } from 'react-icons/gr';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Products = () => {
     const navigate = useNavigate();
@@ -19,6 +20,20 @@ const Products = () => {
     const handleAddProduct = () => {
         navigate('/addProduct')
     }
+
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/products/${id}`, {
+            method: 'DELETE',
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                const remaining = products.filter(product => product._id !== id);
+                setProducts(remaining);
+                toast.success('Deleted Successfully')
+            })
+    }
+
     return (
         <div className='mx-2'>
             <div className='flex justify-between px-10 py-4'>
@@ -45,6 +60,7 @@ const Products = () => {
                                 products.map(product => <Product
                                     key={product._id}
                                     product={product}
+                                    handleDelete={handleDelete}
                                 ></Product>)
                             }
 

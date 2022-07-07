@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-const Product = ({ product }) => {
+const Product = ({ product, handleDelete }) => {
 
     const { _id } = product;
     console.log((_id))
@@ -10,6 +10,7 @@ const Product = ({ product }) => {
     const handleEditProduct = id => {
         navigate(`/products/${id}`)
     }
+
 
     return (
         <tr>
@@ -22,7 +23,9 @@ const Product = ({ product }) => {
                     <button
                         onClick={() => handleEditProduct(_id)}
                         className='bg-blue-400 py-1 px-2 rounded-md hover:bg-blue-600'>Edit</button>
-                    <button className='bg-red-400 py-1 px-2 rounded-md hover:bg-red-600'>Delete</button>
+                    <button
+                        onClick={() => handleDelete(_id)}
+                        className='bg-red-400 py-1 px-2 rounded-md hover:bg-red-600'>Delete</button>
                 </div>
             </td>
         </tr>
