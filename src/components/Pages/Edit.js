@@ -7,10 +7,9 @@ const Edit = () => {
 
     const { id } = useParams();
     const [product, setProduct] = useState({});
-    console.log(product);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/editProduct/${id}`)
+        fetch(`http://localhost:5000/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
