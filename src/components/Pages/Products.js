@@ -12,7 +12,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://damp-badlands-46617.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -22,7 +22,7 @@ const Products = () => {
     }
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://damp-badlands-46617.herokuapp.com/products/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -38,10 +38,10 @@ const Products = () => {
         <div className='mx-2'>
             <div className='flex justify-between px-10 py-4'>
                 <p className='text-xl font-medium'>Product List</p>
-                <p className='text-xl font-medium'>Total products: <span className='h-10 w-2 bg-slate-800 p-1 rounded-full text-white font-normal text-base'>0{products.length}</span> </p>
+                <p className='text-xl font-medium hidden md:block'>Total products: <span className='h-10 w-2 bg-slate-800 p-1 rounded-full text-white font-normal text-base'>0{products.length}</span> </p>
                 <button
                     onClick={handleAddProduct}
-                    className='flex items-center gap-1 bg-green-300 hover:bg-green-500 px-2 py-1 rounded-md'>Add Product <GrAdd></GrAdd></button>
+                    className='flex items-center gap-1 bg-green-300 hover:bg-green-500 px-2 py-1 rounded-md font-medium'>Add Product <GrAdd></GrAdd></button>
             </div>
             <div>
                 <div class="overflow-x-auto">

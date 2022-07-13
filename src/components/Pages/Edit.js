@@ -12,7 +12,7 @@ const Edit = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://damp-badlands-46617.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id]);
@@ -28,7 +28,7 @@ const Edit = () => {
 
         const updatedProduct = { name, brand, price, quantity, picture }
 
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://damp-badlands-46617.herokuapp.com/products/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -65,7 +65,7 @@ const Edit = () => {
                 <form
                     onSubmit={handleUpdate}
                 >
-                    <div className='mt-10'>
+                    <div className='mt-10 flex flex-col mx-2'>
                         <input
                             className='bg-gray-200 px-1 rounded-md mb-2'
                             type="text" name="name" placeholder='Name' />
@@ -82,7 +82,7 @@ const Edit = () => {
                             className='bg-gray-200 px-1 rounded-md mb-2'
                             type="text" name="picture" placeholder='Photo URL' />
                     </div>
-                    <input className='btn btn-sm btn:info hover:btn-success w-32 mx-auto m-2' type="submit" value='Update Product' />
+                    <input className='btn btn-sm btn:info hover:btn-success w-36 mx-auto m-2' type="submit" value='Update Product' />
                 </form>
             </div>
         </div>

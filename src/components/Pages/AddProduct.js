@@ -14,7 +14,7 @@ const AddProduct = () => {
 
         const product = { name, brand, price, quantity, picture }
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://damp-badlands-46617.herokuapp.com/products', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
