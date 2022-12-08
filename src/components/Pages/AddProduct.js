@@ -14,7 +14,7 @@ const AddProduct = () => {
 
         const product = { name, brand, price, quantity, picture }
 
-        fetch('https://damp-badlands-46617.herokuapp.com/products', {
+        fetch('https://simple-curd-server.onrender.com/products', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

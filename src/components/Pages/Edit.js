@@ -12,7 +12,7 @@ const Edit = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`https://damp-badlands-46617.herokuapp.com/products/${id}`)
+        fetch(`https://simple-curd-server.onrender.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id]);
@@ -28,7 +28,7 @@ const Edit = () => {
 
         const updatedProduct = { name, brand, price, quantity, picture }
 
-        fetch(`https://damp-badlands-46617.herokuapp.com/products/${id}`, {
+        fetch(`https://simple-curd-server.onrender.com/products/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

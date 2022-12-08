@@ -12,7 +12,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://damp-badlands-46617.herokuapp.com/products')
+        fetch('https://simple-curd-server.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -22,7 +22,7 @@ const Products = () => {
     }
 
     const handleDelete = id => {
-        fetch(`https://damp-badlands-46617.herokuapp.com/products/${id}`, {
+        fetch(`https://simple-curd-server.onrender.com/products/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
